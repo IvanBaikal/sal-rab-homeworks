@@ -12,7 +12,7 @@ function addInCartMessage(title, price) {
     message = message + productPrice;
     message = message + " ";
     message = message + "теперь в корзине!";
-console.log('message') 
+    console.log('message');
 
     return message;
 }
