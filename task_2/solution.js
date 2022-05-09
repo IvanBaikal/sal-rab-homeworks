@@ -28,8 +28,8 @@ function calcShipping(sum, min, shipping) {
 
     // Конец решения задания №2.1.
 
-    //return shippingPrice;
-    return shippingSum;
+    return shippingPrice;
+   
 }
 
 function calcDiscount(sum, min, discount) {
@@ -50,8 +50,8 @@ function calcDiscount(sum, min, discount) {
     }
     // Конец решения задания №2.2.
 
-    //return discountPart;
-    return discountSum;
+    return discountPart;
+   
 }
 
 function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shippingPrice}) {
