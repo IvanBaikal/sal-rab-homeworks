@@ -38,7 +38,7 @@
 function sendRequest(name, phone, address, goods, sum) {
    
      
-   // let data = {client: {name, phone}, order: {address, sum}, goods: []}
+   
     
     let data = {goods: [], order: {}};
   
@@ -47,14 +47,15 @@ function sendRequest(name, phone, address, goods, sum) {
 
     for (let i = 0; i < countOfGoods; i += 1) {
 
-        data.goods = {title:goods.title, count:goods.count};
-
-        data.goods.push(goods[i].title, goods[i].count);
+        
+        data.push({title[i]});
+        data.push({count[i]});
+       
     }
 
-    data.order.address = `${data.order.street}, ${data.order.house}, ${data.order.entrance}, ${data.order.floor}, ${data.order.flat}`;
+    address = JSON.stringify(address); // вроде такое преобразование из сложного объекта в строку
     data.order.sum = sum;
-    data.client = `${name} ${phone}`; // or data.client = sendRequest(name) + " " + sendRequest(phone);
+    data.client = `${name} ${phone}`;
 
     let jsonData = JSON.stringify({data});
 
