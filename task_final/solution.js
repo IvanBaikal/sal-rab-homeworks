@@ -49,7 +49,7 @@ function sendRequest(name, phone, address, goods, sum) {
                
     }
 
-    data.address = JSON.stringify(address); // было просто address = JSON.stringify(address);
+    address = JSON.stringify(address); // было просто address = JSON.stringify(address);
     data.order.sum = sum;
     data.client = `${name} ${phone}`;
 
