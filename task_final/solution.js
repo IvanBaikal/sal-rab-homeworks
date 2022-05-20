@@ -48,9 +48,8 @@ function sendRequest(name, phone, address, goods, sum) {
     for (let i = 0; i < countOfGoods; i += 1) {
 
         
-        data.push({title[i]});
-        data.push({count[i]});
-       
+        data.goods.push({title: i}); // ранне было так  data.goods.push(goods[i].title, goods[i].count);
+               
     }
 
     address = JSON.stringify(address); // вроде такое преобразование из сложного объекта в строку
