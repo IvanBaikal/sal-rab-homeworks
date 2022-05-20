@@ -42,12 +42,13 @@ function sendRequest(name, phone, address, goods, sum) {
     let countOfGoods = goods.length;
    
 
-    for (let i = 0; i < countOfGoods; i +1) {
+    for (let i = 0; i < countOfGoods; i += 1) {
 
-        let newData = [goods[i].title, goods[i].count];
+        let newData = [`${goods[i].title} ${goods[i].count}`];  
+       
     
         newData.push(newData);
-                     
+       
     }
 
     data.order.address = `ул. ${address.street}, дом ${address.house}, ${address.entrance} подъезд, ${address.floor} этаж, кв ${address.flat}`;
