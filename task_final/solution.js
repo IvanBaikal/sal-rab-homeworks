@@ -54,7 +54,7 @@ function sendRequest(name, phone, address, goods, sum) {
                
     }
 
-    data.order.address = JSON.stringify(address); // было address = JSON.stringify({address})
+    data.order.address = address.street + "" + address.house + "" + address. entrance + "" + address. floor + "" + address.flat // было address = JSON.stringify({address})
     data.order.sum = sum;
     data.client = `${name} ${phone}`;
 
